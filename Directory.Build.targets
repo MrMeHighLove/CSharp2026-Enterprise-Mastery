@@ -1,0 +1,23 @@
+<Project>
+
+  <!--
+    Chapters that explicitly opt out of warnings-as-errors are manuscript
+    snippet containers. Their .cs files are preserved in the project tree for
+    readers, but many contain ellipses, standalone statements, or future
+    language examples that are not valid compilation units.
+  -->
+  <ItemGroup Condition="'$(TreatWarningsAsErrors)' == 'false' and '$(IsTestProject)' != 'true'">
+    <None Include="@(Compile)" />
+    <Compile Remove="@(Compile)" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(IsTestProject)' == 'true'
+      and '$(MSBuildProjectName)' != 'CSharp2026.Common.Tests'
+      and '$(MSBuildProjectName)' != 'CSharp2026.Chapter05.Tests'
+      and '$(MSBuildProjectName)' != 'CSharp2026.Benchmarks.Tests'">
+    <!-- Smoke tests do not use source types; removing these references avoids
+         building raw snippet containers again during every smoke-test build. -->
+    <ProjectReference Remove="@(ProjectReference)" />
+  </ItemGroup>
+
+</Project>

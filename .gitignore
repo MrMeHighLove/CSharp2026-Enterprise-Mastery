@@ -1,0 +1,54 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio / Rider / VS Code
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Test results / coverage
+[Tt]est[Rr]esult*/
+[Cc]overage*/
+*.coverage
+*.coveragexml
+coverlet.runsettings
+
+# NuGet
+*.nupkg
+*.snupkg
+*.nuget.props
+*.nuget.targets
+packages/
+.nuget/
+
+# Build / publish artifacts
+artifacts/
+publish/
+PublishProfiles/
+
+# OS / editor noise
+.DS_Store
+._*
+Thumbs.db
+*.tmp
+*.swp
+*.bak
+*~
+
+# Local secrets / env
+*.local.json
+secrets.json
+.env
+.env.local

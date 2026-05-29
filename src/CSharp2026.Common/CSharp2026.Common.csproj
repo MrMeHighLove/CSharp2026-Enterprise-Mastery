@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>CSharp2026.Common</RootNamespace>
+    <AssemblyName>CSharp2026.Common</AssemblyName>
+    <Description>Shared domain primitives used across every chapter project.</Description>
+  </PropertyGroup>
+
+</Project>

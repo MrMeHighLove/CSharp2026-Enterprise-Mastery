@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CSharp2026.Benchmarks</RootNamespace>
+    <AssemblyName>CSharp2026.Benchmarks</AssemblyName>
+    <Description>Runnable BenchmarkDotNet benchmarks for selected book snippets.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>CSharp2026.Chapter14.Tests</RootNamespace>
+    <AssemblyName>CSharp2026.Chapter14.Tests</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+    <PackageReference Include="FluentAssertions" />
+    <PackageReference Include="coverlet.collector" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\CSharp2026.Chapter14\CSharp2026.Chapter14.csproj" />
+    <ProjectReference Include="..\..\src\CSharp2026.Common\CSharp2026.Common.csproj" />
+  </ItemGroup>
+
+</Project>

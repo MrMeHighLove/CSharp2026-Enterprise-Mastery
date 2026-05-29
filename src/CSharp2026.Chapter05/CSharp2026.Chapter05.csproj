@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>CSharp2026.Chapter05</RootNamespace>
+    <AssemblyName>CSharp2026.Chapter05</AssemblyName>
+    <Description>
+      Chapter 5 — Design Patterns: Strategy, Builder, Decorator, Mediator.
+      Fully-compiling chapter project demonstrating the structure every
+      other chapter project should evolve toward.
+    </Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CSharp2026.Common\CSharp2026.Common.csproj" />
+  </ItemGroup>
+
+</Project>

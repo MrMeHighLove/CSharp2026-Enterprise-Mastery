@@ -1,0 +1,40 @@
+<Project>
+
+  <!--
+    Global build settings applied to every project under the repo root.
+    A senior team owns its build configuration; per-project .csproj files
+    should only declare what is genuinely project-specific.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591;CA1707;CA2007;CA1303</NoWarn>
+    <DefaultItemExcludes>$(DefaultItemExcludes);**/._*</DefaultItemExcludes>
+
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition=" '$(CI)' == 'true' ">true</ContinuousIntegrationBuild>
+
+    <Company>Victor Mihailov</Company>
+    <Authors>Victor Mihailov</Authors>
+    <Product>C# 2026: Enterprise Mastery — Code Examples</Product>
+    <Copyright>Copyright (c) 2026 Victor Mihailov</Copyright>
+    <PackageProjectUrl>https://github.com/MrMeHighLove/CSharp2026-Enterprise-Mastery</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/MrMeHighLove/CSharp2026-Enterprise-Mastery</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <!-- Test-project defaults: examples can stay strict, tests get tiny relaxations. -->
+  <PropertyGroup Condition="$(MSBuildProjectName.EndsWith('.Tests'))">
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <NoWarn>$(NoWarn);CA1707;CA2007;CA1303;CS1591</NoWarn>
+  </PropertyGroup>
+
+</Project>

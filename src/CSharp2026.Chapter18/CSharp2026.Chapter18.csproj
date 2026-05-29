@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>CSharp2026.Chapter18</RootNamespace>
+    <AssemblyName>CSharp2026.Chapter18</AssemblyName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <Nullable>annotations</Nullable>
+    <NoWarn>$(NoWarn);CS0246;CS0103;CS1591;CS8632;CA1812;CA1822;CA1052;CA1707;CA2007;CS0436</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CSharp2026.Common\CSharp2026.Common.csproj" />
+  </ItemGroup>
+
+</Project>
